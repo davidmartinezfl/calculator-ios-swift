@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8E25DF2924060BF0003453F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E25DF2824060BF0003453F9 /* AppDelegate.swift */; };
-		8E25DF2B24060BF0003453F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E25DF2A24060BF0003453F9 /* SceneDelegate.swift */; };
-		8E25DF2D24060BF0003453F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E25DF2C24060BF0003453F9 /* ViewController.swift */; };
-		8E25DF3024060BF0003453F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E25DF2E24060BF0003453F9 /* Main.storyboard */; };
 		8E25DF3224060BF5003453F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E25DF3124060BF5003453F9 /* Assets.xcassets */; };
 		8E25DF3524060BF5003453F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E25DF3324060BF5003453F9 /* LaunchScreen.storyboard */; };
 		8E25DF4024060BF5003453F9 /* calculator_ios_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E25DF3F24060BF5003453F9 /* calculator_ios_swiftTests.swift */; };
@@ -27,11 +24,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8E25DF2524060BF0003453F9 /* calculator-ios-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "calculator-ios-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E25DF2524060BF0003453F9 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E25DF2824060BF0003453F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8E25DF2A24060BF0003453F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8E25DF2C24060BF0003453F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8E25DF2F24060BF0003453F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E25DF3124060BF5003453F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E25DF3424060BF5003453F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E25DF3624060BF5003453F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -70,7 +64,7 @@
 		8E25DF2624060BF0003453F9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8E25DF2524060BF0003453F9 /* calculator-ios-swift.app */,
+				8E25DF2524060BF0003453F9 /* Calculator.app */,
 				8E25DF3B24060BF5003453F9 /* calculator-ios-swiftTests.xctest */,
 			);
 			name = Products;
@@ -79,13 +73,10 @@
 		8E25DF2724060BF0003453F9 /* calculator-ios-swift */ = {
 			isa = PBXGroup;
 			children = (
+				8E25DF4A24061E60003453F9 /* Supporting Files */,
 				8E25DF2824060BF0003453F9 /* AppDelegate.swift */,
-				8E25DF2A24060BF0003453F9 /* SceneDelegate.swift */,
-				8E25DF2C24060BF0003453F9 /* ViewController.swift */,
-				8E25DF2E24060BF0003453F9 /* Main.storyboard */,
 				8E25DF3124060BF5003453F9 /* Assets.xcassets */,
 				8E25DF3324060BF5003453F9 /* LaunchScreen.storyboard */,
-				8E25DF3624060BF5003453F9 /* Info.plist */,
 			);
 			path = "calculator-ios-swift";
 			sourceTree = "<group>";
@@ -97,6 +88,14 @@
 				8E25DF4124060BF5003453F9 /* Info.plist */,
 			);
 			path = "calculator-ios-swiftTests";
+			sourceTree = "<group>";
+		};
+		8E25DF4A24061E60003453F9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8E25DF3624060BF5003453F9 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -116,7 +115,7 @@
 			);
 			name = "calculator-ios-swift";
 			productName = "calculator-ios-swift";
-			productReference = 8E25DF2524060BF0003453F9 /* calculator-ios-swift.app */;
+			productReference = 8E25DF2524060BF0003453F9 /* Calculator.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8E25DF3A24060BF5003453F9 /* calculator-ios-swiftTests */ = {
@@ -182,7 +181,6 @@
 			files = (
 				8E25DF3524060BF5003453F9 /* LaunchScreen.storyboard in Resources */,
 				8E25DF3224060BF5003453F9 /* Assets.xcassets in Resources */,
-				8E25DF3024060BF0003453F9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,9 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E25DF2D24060BF0003453F9 /* ViewController.swift in Sources */,
 				8E25DF2924060BF0003453F9 /* AppDelegate.swift in Sources */,
-				8E25DF2B24060BF0003453F9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,14 +221,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8E25DF2E24060BF0003453F9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8E25DF2F24060BF0003453F9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8E25DF3324060BF5003453F9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,7 +282,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -348,7 +336,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -364,13 +352,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5TLZKAW4S3;
-				INFOPLIST_FILE = "calculator-ios-swift/Info.plist";
+				INFOPLIST_FILE = "calculator-ios-swift/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.davidmartinezfl.calculator-ios-swift";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Calculator;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -382,13 +370,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5TLZKAW4S3;
-				INFOPLIST_FILE = "calculator-ios-swift/Info.plist";
+				INFOPLIST_FILE = "calculator-ios-swift/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.davidmartinezfl.calculator-ios-swift";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Calculator;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
