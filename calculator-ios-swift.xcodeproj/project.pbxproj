@@ -11,6 +11,8 @@
 		8E25DF3224060BF5003453F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E25DF3124060BF5003453F9 /* Assets.xcassets */; };
 		8E25DF3524060BF5003453F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E25DF3324060BF5003453F9 /* LaunchScreen.storyboard */; };
 		8E25DF4024060BF5003453F9 /* calculator_ios_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E25DF3F24060BF5003453F9 /* calculator_ios_swiftTests.swift */; };
+		8E25DF552406D0AD003453F9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E25DF532406D0AD003453F9 /* HomeViewController.swift */; };
+		8E25DF562406D0AD003453F9 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E25DF542406D0AD003453F9 /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,8 @@
 		8E25DF3B24060BF5003453F9 /* calculator-ios-swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "calculator-ios-swiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E25DF3F24060BF5003453F9 /* calculator_ios_swiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculator_ios_swiftTests.swift; sourceTree = "<group>"; };
 		8E25DF4124060BF5003453F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E25DF532406D0AD003453F9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8E25DF542406D0AD003453F9 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,10 +77,13 @@
 		8E25DF2724060BF0003453F9 /* calculator-ios-swift */ = {
 			isa = PBXGroup;
 			children = (
-				8E25DF4A24061E60003453F9 /* Supporting Files */,
 				8E25DF2824060BF0003453F9 /* AppDelegate.swift */,
+				8E25DF4C2406CE7F003453F9 /* View */,
+				8E25DF4D2406CE8A003453F9 /* Controller */,
+				8E25DF4B2406CE70003453F9 /* Model */,
+				8E25DF4E2406CEC8003453F9 /* Util */,
+				8E25DF4A24061E60003453F9 /* Supporting Files */,
 				8E25DF3124060BF5003453F9 /* Assets.xcassets */,
-				8E25DF3324060BF5003453F9 /* LaunchScreen.storyboard */,
 			);
 			path = "calculator-ios-swift";
 			sourceTree = "<group>";
@@ -96,6 +103,61 @@
 				8E25DF3624060BF5003453F9 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8E25DF4B2406CE70003453F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8E25DF4C2406CE7F003453F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E25DF4F2406CEF7003453F9 /* Launch */,
+				8E25DF512406CF7A003453F9 /* Home */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8E25DF4D2406CE8A003453F9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8E25DF522406CFA6003453F9 /* Home */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8E25DF4E2406CEC8003453F9 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		8E25DF4F2406CEF7003453F9 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				8E25DF3324060BF5003453F9 /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		8E25DF512406CF7A003453F9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8E25DF542406D0AD003453F9 /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8E25DF522406CFA6003453F9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8E25DF532406D0AD003453F9 /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +243,7 @@
 			files = (
 				8E25DF3524060BF5003453F9 /* LaunchScreen.storyboard in Resources */,
 				8E25DF3224060BF5003453F9 /* Assets.xcassets in Resources */,
+				8E25DF562406D0AD003453F9 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E25DF2924060BF0003453F9 /* AppDelegate.swift in Sources */,
+				8E25DF552406D0AD003453F9 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
