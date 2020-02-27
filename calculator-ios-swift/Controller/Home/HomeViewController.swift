@@ -10,6 +10,34 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    // MARK: - Outlets
+    
+    // Result
+    @IBOutlet weak var lblResult: UILabel!
+    
+    // Numbers
+    @IBOutlet weak var btn0: UIButton!
+    @IBOutlet weak var btn1: UIButton!
+    @IBOutlet weak var btn2: UIButton!
+    @IBOutlet weak var btn3: UIButton!
+    @IBOutlet weak var btn4: UIButton!
+    @IBOutlet weak var btn5: UIButton!
+    @IBOutlet weak var btn6: UIButton!
+    @IBOutlet weak var btn7: UIButton!
+    @IBOutlet weak var btn8: UIButton!
+    @IBOutlet weak var btn9: UIButton!
+    
+    //Operators
+    @IBOutlet weak var btnAC: UIButton!
+    @IBOutlet weak var btnPlusMinus: UIButton!
+    @IBOutlet weak var btnPercent: UIButton!
+    @IBOutlet weak var btnDivision: UIButton!
+    @IBOutlet weak var btnMultiplication: UIButton!
+    @IBOutlet weak var btnSubstraction: UIButton!
+    @IBOutlet weak var btnAddition: UIButton!
+    @IBOutlet weak var btnResult: UIButton!
+    @IBOutlet weak var btnDecimal: UIButton!
+    
     // MARK: - Initialization
     
     init() {
@@ -24,10 +52,72 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // UI
+        btn0.round()
+        btn1.round()
+        btn2.round()
+        btn3.round()
+        btn4.round()
+        btn5.round()
+        btn6.round()
+        btn7.round()
+        btn8.round()
+        btn9.round()
+        
+        btnAC.round()
+        btnPlusMinus.round()
+        btnPercent.round()
+        btnDivision.round()
+        btnMultiplication.round()
+        btnSubstraction.round()
+        btnAddition.round()
+        btnResult.round()
+        btnDecimal.round()
     }
-
-
+    
+    // MARK: - Button Actions
+    
+    @IBAction func btnActionAC(_ sender: UIButton) {
+        sender.shine()
+    }
+    
+    @IBAction func btnActionPlusMinus(_ sender: UIButton) {
+        sender.shine()
+    }
+    
+    @IBAction func btnActionPercent(_ sender: UIButton) {
+        sender.shine()
+    }
+    
+    @IBAction func btnActionDivision(_ sender: UIButton) {
+        sender.shine()
+    }
+    
+    @IBAction func btnActionMultiplication(_ sender: UIButton) {
+        sender.shine()
+    }
+    
+    @IBAction func btnActionSubstraction(_ sender: UIButton) {
+        sender.shine()
+    }
+    
+    @IBAction func btnActionAddition(_ sender: UIButton) {
+        sender.shine()
+    }
+    
+    @IBAction func btnActionResult(_ sender: UIButton) {
+        sender.shine()
+    }
+    
+    @IBAction func btnActionDecimal(_ sender: UIButton) {
+        sender.shine()
+    }
+    
+    @IBAction func btnActionNumber(_ sender: UIButton) {
+        sender.shine()
+        print(sender.tag)
+    }
+    
     /*
     // MARK: - Navigation
 
