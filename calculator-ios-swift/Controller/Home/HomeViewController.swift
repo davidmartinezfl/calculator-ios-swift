@@ -49,6 +49,7 @@ class HomeViewController: UIViewController {
     
     private let kDecimalSeparator = Locale.current.decimalSeparator!
     private let kMaxLength = 9
+    private let kTotal = "total"
     
     private enum OperationType {
         case none, addiction, substraction, multiplication, division, percent
@@ -114,7 +115,18 @@ class HomeViewController: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // Cambia el caracter decimal según la región del dispositivo
+        btnDecimal.setTitle(kDecimalSeparator, for: .normal)
+        
+        total = UserDefaults.standard.double(forKey: kTotal)
+        
+        result()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
         // UI
         btn0.round()
         btn1.round()
@@ -136,11 +148,6 @@ class HomeViewController: UIViewController {
         btnAddition.round()
         btnResult.round()
         btnDecimal.round()
-        
-        // Cambia el caracter decimal según la región del dispositivo
-        btnDecimal.setTitle(kDecimalSeparator, for: .normal)
-        
-        result()
     }
     
     // MARK: - Button Actions
@@ -176,6 +183,7 @@ class HomeViewController: UIViewController {
         
         operating = true
         operation = .division
+        sender.selectOperation(true)
         
         sender.shine()
     }
@@ -187,6 +195,7 @@ class HomeViewController: UIViewController {
         
         operating = true
         operation = .multiplication
+        sender.selectOperation(true)
         
         sender.shine()
     }
@@ -198,6 +207,7 @@ class HomeViewController: UIViewController {
 
         operating = true
         operation = .substraction
+        sender.selectOperation(true)
         
         sender.shine()
     }
@@ -209,6 +219,7 @@ class HomeViewController: UIViewController {
         
         operating = true
         operation = .addiction
+        sender.selectOperation(true)
         
         sender.shine()
     }
@@ -220,12 +231,15 @@ class HomeViewController: UIViewController {
     
     @IBAction func btnActionDecimal(_ sender: UIButton) {
         let currentTemp = auxTotalFormatter.string(from: NSNumber(value: temp))!
-        if !operating && currentTemp.count >= kMaxLength {
+        
+        if lblResult.text?.contains(kDecimalSeparator) ?? false || (!operating && currentTemp.count >= kMaxLength) {
             return
         }
 
         lblResult.text = lblResult.text! + kDecimalSeparator
         decimal = true
+        
+        selectVisualOperation()
         
         sender.shine()
     }
@@ -257,6 +271,8 @@ class HomeViewController: UIViewController {
         let number = sender.tag
         temp = Double(currentTemp + String(number))!
         lblResult.text = printFormatter.string(from: NSNumber(value: temp))
+        
+        selectVisualOperation()
         
         sender.shine()
     }
@@ -306,8 +322,56 @@ class HomeViewController: UIViewController {
         }
         
         operation = .none
+        
+        selectVisualOperation()
+        
+        UserDefaults.standard.set(total, forKey: kTotal)
 
         print("TOTAL: \(total)")
+    }
+    
+    // Muestra de forma visual la operación seleccionada
+    private func selectVisualOperation() {
+        if !operating {
+            // No estamos operando
+            btnAddition.selectOperation(false)
+            btnSubstraction.selectOperation(false)
+            btnMultiplication.selectOperation(false)
+            btnDivision.selectOperation(false)
+        } else {
+            switch operation {
+            case .none, .percent:
+                btnAddition.selectOperation(false)
+                btnSubstraction.selectOperation(false)
+                btnMultiplication.selectOperation(false)
+                btnDivision.selectOperation(false)
+                break
+            case .addiction:
+                btnAddition.selectOperation(true)
+                btnSubstraction.selectOperation(false)
+                btnMultiplication.selectOperation(false)
+                btnDivision.selectOperation(false)
+                break
+            case .substraction:
+                btnAddition.selectOperation(false)
+                btnSubstraction.selectOperation(true)
+                btnMultiplication.selectOperation(false)
+                btnDivision.selectOperation(false)
+                break
+            case .multiplication:
+                btnAddition.selectOperation(false)
+                btnSubstraction.selectOperation(false)
+                btnMultiplication.selectOperation(true)
+                btnDivision.selectOperation(false)
+                break
+            case .division:
+                btnAddition.selectOperation(false)
+                btnSubstraction.selectOperation(false)
+                btnMultiplication.selectOperation(false)
+                btnDivision.selectOperation(true)
+                break
+            }
+        }
     }
     
     /*
